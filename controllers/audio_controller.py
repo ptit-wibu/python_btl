@@ -639,6 +639,8 @@ class AudioController:
     def change_language(self, event=None):
         lang = self.main_view.lang_combobox.get()
         self.main_view.current_lang = "vi" if lang == "Tiếng Việt" else "en"
+        self.control_panel.current_lang = self.main_view.current_lang  # Cập nhật current_lang cho ControlPanel
+        self.waveform_view.current_lang = self.main_view.current_lang  # Cập nhật current_lang cho WaveformView
         lang_dict = self.main_view.languages[self.main_view.current_lang]
         self.main_view.root.title(lang_dict["title"])
         self.main_view.status.config(text=lang_dict["status"])
@@ -648,11 +650,8 @@ class AudioController:
         self.control_panel.load_button.config(text=lang_dict["load"])
         self.control_panel.format_label.config(text=lang_dict["format"])
         self.control_panel.export_button.config(text=lang_dict["export"])
-        self.control_panel.save_project_button.config(text=lang_dict["save_project"])
-        self.control_panel.load_project_button.config(text=lang_dict["load_project"])
         self.control_panel.undo_button.config(text=lang_dict["undo"])
         self.control_panel.redo_button.config(text=lang_dict["redo"])
-        self.control_panel.reset_button.config(text=lang_dict["reset"])
         self.control_panel.cut_label.config(text=lang_dict["cut"])
         self.control_panel.apply_cut_button.config(text=lang_dict["apply_cut"])
         self.control_panel.volume_label.config(text=lang_dict["volume"])
