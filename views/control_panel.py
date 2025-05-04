@@ -168,3 +168,14 @@ class ControlPanel:
                 f"Bitrate: {bitrate/1000:.1f} kbps | Title: {metadata['title']} | "
                 f"Artist: {metadata['artist']} | Size: {metadata['size']:.2f} MB")
         self.file_info_label.config(text=info)
+'''
+    def update_file_info(self, duration, channels, sample_rate, bitrate, metadata):
+        info = (f"Thời lượng: {duration:.2f}s | Kênh: {channels} | Tần số: {sample_rate} Hz | "
+                f"Bitrate: {bitrate/1000:.1f} kbps | Tựa đề: {metadata['title']} | "
+                f"Nghệ sĩ: {metadata['artist']} | Kích thước: {metadata['size']:.2f} MB"
+                if self.current_lang == "vi" else
+                f"Duration: {duration:.2f}s | Channels: {channels} | Sample Rate: {sample_rate} Hz | "
+                f"Bitrate: {bitrate/1000:.1f} kbps | Title: {metadata['title']} | "
+                f"Artist: {metadata['artist']} | Size: {metadata['size']:.2f} MB")
+        self.file_info_label.config(text=info)
+'''
