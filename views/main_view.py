@@ -35,7 +35,15 @@ class MainView:
                 "timeline": "Thanh thời gian:",
                 "bass": "Bass:",
                 "mid": "Mid:",
-                "treble": "Treble:"
+                "treble": "Treble:",
+                # Thêm các khóa mới cho update_file_info
+                "duration": "Thời lượng",
+                "channels": "Kênh",
+                "sample_rate": "Tần số",
+                "bitrate": "Bitrate",
+                "title_label": "Tựa đề",  # Đổi từ "title" để tránh xung đột
+                "artist": "Nghệ sĩ",
+                "size": "Kích thước"
             },
             "en": {
                 "title": "Audio Editor - Inspired by VocalRemover",
@@ -65,7 +73,15 @@ class MainView:
                 "timeline": "Timeline:",
                 "bass": "Bass:",
                 "mid": "Mid:",
-                "treble": "Treble:"
+                "treble": "Treble:",
+                # Thêm các khóa mới cho update_file_info
+                "duration": "Duration",
+                "channels": "Channels",
+                "sample_rate": "Sample Rate",
+                "bitrate": "Bitrate",
+                "title_label": "Title",
+                "artist": "Artist",
+                "size": "Size"
             }
         }
         self.current_lang = "vi"
